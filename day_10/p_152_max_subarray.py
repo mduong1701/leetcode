@@ -1,7 +1,5 @@
 def maxProduct(nums):
-
-    result = max(nums) # 1 -9 2 [8] 0 -3 7 4 -6 5
-
+    result = max(nums)
     curMin = 1
     curMax = 1
 
@@ -10,6 +8,7 @@ def maxProduct(nums):
         curMin = min(num, num * curMin, num * curMax)
         curMax = max(num, num * tmp, num * curMax)
         result = max(result, curMax)
+        
     return result
 
 print(maxProduct([2,3,-2,4]))
