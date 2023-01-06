@@ -10,7 +10,18 @@ def canPartition(nums):
     possibleSums.add(0)
 
     for i in range(len(nums) - 1, -1, -1):
+        newDP = set()
         for oneSum in possibleSums:
-            
+            newDP.add(oneSum)
+            newDP.add(oneSum + nums[i])
+        possibleSums = newDP
+        if target in possibleSums:
+            return True
+    
+    return False
+
+print(canPartition([1,5,11,5]))
+print(canPartition([1,2,3,5]))
+
 
 
