@@ -14,3 +14,5 @@ def permute(nums):
 
     dfs(0)
     return result
+
+print(permute([1,2,3]))
