@@ -19,3 +19,4 @@ def combinationSum(candidates, target):
 
 print(combinationSum([2,3,6,7], 7))
 print(combinationSum([2,3,5], 8))
+print(combinationSum([1,2,3,4,5], 5))
