@@ -19,3 +19,5 @@ def asteroidCollision(asteroids):
     return stack
 
 print(asteroidCollision([5,10,-5]))
+print(asteroidCollision([8,-8]))
+print(asteroidCollision([10,2,-5]))
