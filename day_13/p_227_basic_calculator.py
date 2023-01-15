@@ -22,4 +22,7 @@ def calculate(s):
                 numberStack.append(numberStack.pop() // currentNumber)
 
             sign = character
-            currentNumber = 0    
+            currentNumber = 0
+    
+    return sum(numberStack)
+
