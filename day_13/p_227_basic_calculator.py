@@ -26,3 +26,5 @@ def calculate(s):
     
     return sum(numberStack)
 
+print(calculate("3+2*2"))
+print(calculate("   3    +    5   /   2"))
