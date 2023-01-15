@@ -19,7 +19,7 @@ def calculate(s):
             if sign == "*":
                 numberStack.append(numberStack.pop() * currentNumber)
             if sign == "/":
-                numberStack.append(numberStack.pop() // currentNumber)
+                numberStack.append(int(numberStack.pop() / currentNumber))
 
             sign = character
             currentNumber = 0
@@ -28,3 +28,4 @@ def calculate(s):
 
 print(calculate("3+2*2"))
 print(calculate("   3    +    5   /   2"))
+print(calculate("14-3/2"))
