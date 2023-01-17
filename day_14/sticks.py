@@ -14,5 +14,5 @@ def stickNum(sticks, k):
     return resultArray[-1]
 
 print(stickNum([1,5,12], 13))
-print(stickNum([1,5,12], 13))
-print(stickNum([1,5,12], 13))
+print(stickNum([1,14,30,17], 68))
+print(stickNum([13,17,43,100,110,120], 109))
