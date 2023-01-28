@@ -1,27 +1,26 @@
 def threeSum(nums):
     nums.sort()
 
-    visited = set()
-
     result = []
 
     for i in range(len(nums) - 2):
-        if nums[i] in visited:
+        if i > 0 and nums[i] == nums[i-1]:
             continue
-
-        visited.add(nums[i])
 
         left = i + 1
         right = len(nums) - 1
 
-        dif = 0 - nums[i]
         while left < right:
-            if dif > nums[left] + nums[right]:
-                left += 1
-            elif dif < nums[left] + nums[right]:
+            sum = nums[i] + nums[left] + nums[right]
+            if sum > 0:
                 right -= 1
+            elif sum < 0:
+                left += 1
             else:
                 result.append([nums[i],nums[left],nums[right]])
+                left += 1
+                while nums[left] == nums[left - 1] and left < right:
+                    left += 1
 
     return result
 
