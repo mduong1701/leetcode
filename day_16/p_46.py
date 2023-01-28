@@ -6,7 +6,7 @@ def permute(nums):
             result.append(permutation)
         else:
             for i in range(len(array)):
-                newPermutation = permutation.append(array[i])
+                newPermutation = permutation + [array[i]]
                 newArray = array[:i] + array[i+1:]
                 dfs(newArray, newPermutation)
 
