@@ -11,14 +11,18 @@ def threeSum(nums):
 
         visited.add(nums[i])
 
-        numSet = set()
-        for j in range(i + 1, len(nums)):
-            dif = 0 - nums[i] - nums[j]
-            if dif not in numSet:
-                numSet.add(nums[j])
+        left = i + 1
+        right = len(nums) - 1
+
+        dif = 0 - nums[i]
+        while left < right:
+            if dif > nums[left] + nums[right]:
+                left += 1
+            elif dif < nums[left] + nums[right]:
+                right -= 1
             else:
-                result.append([nums[i], nums[j], dif])
-    
+                result.append([nums[i],nums[left],nums[right]])
+
     return result
 
 
