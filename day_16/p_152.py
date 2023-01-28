@@ -1,6 +1,3 @@
-from winreg import REG_RESOURCE_REQUIREMENTS_LIST
-
-
 def maxProduct(nums):
     result = max(nums)
     curMax = 1
@@ -17,3 +14,5 @@ def maxProduct(nums):
             result = max(result, curMax)
 
     return result
+
+print(maxProduct([2,3,-2,4]))
