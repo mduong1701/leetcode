@@ -13,3 +13,5 @@ def longest(s):
     return result
 
 print(longest("abcabcbb"))
+print(longest("bbbbb"))
+print(longest("pwwwkew"))
