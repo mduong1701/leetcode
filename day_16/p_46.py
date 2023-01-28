@@ -14,4 +14,4 @@ def permute(nums):
 
     return result
 
-print(per)
+print(permute([1,2,3]))
