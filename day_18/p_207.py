@@ -4,4 +4,6 @@ def courseSchedule(numCourses, prerequisites):
     # Build the dictionary
     for second, first in prerequisites:
         courseMap[second].append(first)
-    
+    # Initialize a visited set
+    visited = set()
+    # DFS function
