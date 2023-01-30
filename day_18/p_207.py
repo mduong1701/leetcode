@@ -1,0 +1,2 @@
+def courseSchedule(numCourses, prerequisites):
+    
