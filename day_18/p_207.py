@@ -13,4 +13,15 @@ def courseSchedule(numCourses, prerequisites):
         if courseMap[currentCourse] == []:
             return True
 
+        visited.add(currentCourse)
+
+        for prere in courseMap[currentCourse]:
+            if not dfs(prere):
+                return False
+        
+        visited.remove(currentCourse)
+
+        return True
+
+    for course in range(numCourses):
         
