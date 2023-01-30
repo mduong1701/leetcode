@@ -7,3 +7,10 @@ def courseSchedule(numCourses, prerequisites):
     # Initialize a visited set
     visited = set()
     # DFS function
+    def dfs(currentCourse):
+        if currentCourse in visited:
+            return False
+        if courseMap[currentCourse] == []:
+            return True
+
+        
