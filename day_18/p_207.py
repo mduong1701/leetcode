@@ -20,8 +20,12 @@ def courseSchedule(numCourses, prerequisites):
                 return False
         
         visited.remove(currentCourse)
+        courseMap[currentCourse] = []
 
         return True
 
     for course in range(numCourses):
-        
+        if not dfs(course):
+            return False
+    
+    return True
