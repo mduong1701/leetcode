@@ -10,3 +10,7 @@ def wordBreak(s, wordDict):
                 break
     
     return dp[0]
+
+print(wordBreak("leetcode", ["leet","code"]))
+print(wordBreak("applepenapple", ["apple","pen"]))
+print(wordBreak("catsandog", ["cats","dog","sand","and","cat"]))
