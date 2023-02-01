@@ -12,7 +12,7 @@ def search(nums, target):
             if target > nums[middle] or target < nums[left]:
                 left = middle + 1
             else:
-                right = left - 1
+                right = middle - 1
         
         else:
             if target < nums[middle] or target > nums[right]:
