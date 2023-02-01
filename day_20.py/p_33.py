@@ -17,3 +17,11 @@ def search(nums, target):
         else:
             if target < nums[middle] or target > nums[right]:
                 right = middle - 1
+            else:
+                left = middle + 1
+    
+    return -1
+
+print(search([], 0))
+print(search([], 3))
+print(search([], 0))
