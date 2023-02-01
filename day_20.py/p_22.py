@@ -22,5 +22,5 @@ def generateParenthesis(n):
     return result
 
 print(generateParenthesis(1))
-print(generateParenthesis(1))
-print(generateParenthesis(1))
+print(generateParenthesis(2))
+print(generateParenthesis(3))
