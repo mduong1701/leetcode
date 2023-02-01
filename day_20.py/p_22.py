@@ -20,3 +20,7 @@ def generateParenthesis(n):
     backtrack(0, 0)
 
     return result
+
+print(generateParenthesis(1))
+print(generateParenthesis(1))
+print(generateParenthesis(1))
