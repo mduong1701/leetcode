@@ -1,3 +1,6 @@
+import collections
+
+
 def numIslands(grid):
     if not grid:
         return 0
@@ -5,6 +8,7 @@ def numIslands(grid):
     ROWS = len(grid)
     COLUMNS = len(grid[0])
 
+    q = collections.deque()
     visited = set()
     islands = 0
 
