@@ -8,25 +8,30 @@ def numIslands(grid):
     ROWS = len(grid)
     COLUMNS = len(grid[0])
 
-    q = collections.deque()
     visited = set()
     islands = 0
 
     def bfs(r, c):
 
-        DIRECTIONS = [[1,0], [-1, 0], [0,1], [0,-1]]
+        q = collections.deque()
+        q.append((r,c))
         
-        for dR, dC in DIRECTIONS:
-            newRow = r + dR
-            newColumn = c + dC
-            if  newRow >= 0 and \
-                newRow < ROWS and \
-                newColumn >= 0 and \
-                newColumn < COLUMNS and \
-                grid[newRow][newColumn] == "1" and \
-                (newRow, newColumn) not in visited:
-                    visited.add((newRow, newColumn))
-                    q.popleft()
+        while q:
+            
+            DIRECTIONS = [[1,0], [-1, 0], [0,1], [0,-1]]
+            nextR, nextC = q.popleft()
+
+            for dR, dC in DIRECTIONS:
+                newRow = nextR + dR
+                newColumn = nextC + dC
+                if  newRow >= 0 and \
+                    newRow < ROWS and \
+                    newColumn >= 0 and \
+                    newColumn < COLUMNS and \
+                    grid[newRow][newColumn] == "1" and \
+                    (newRow, newColumn) not in visited:
+                        visited.add((newRow, newColumn))
+                        q.append((newRow, newColumn))
 
     for row in range(ROWS):
         for column in range(COLUMNS):
