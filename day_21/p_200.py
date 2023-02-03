@@ -1,6 +1,5 @@
 import collections
 
-
 def numIslands(grid):
     if not grid:
         return 0
