@@ -13,7 +13,8 @@ def numIslands(grid):
     islands = 0
 
     def bfs(r, c):
-        pass
+        DIRECTIONS = [[1,0], [-1, 0], [0,1], [0,-1]]
+        
 
     for row in range(ROWS):
         for column in range(COLUMNS):
