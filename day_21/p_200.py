@@ -14,7 +14,12 @@ def numIslands(grid):
 
     def bfs(r, c):
         DIRECTIONS = [[1,0], [-1, 0], [0,1], [0,-1]]
-        
+        for dR, dC in DIRECTIONS:
+            newRow = r + dR
+            newColumn = c + dC
+            if  newRow >= 0 and \
+                newRow < ROWS \
+
 
     for row in range(ROWS):
         for column in range(COLUMNS):
