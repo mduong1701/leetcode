@@ -15,12 +15,14 @@ def exist(board, word):
             (row, column) in visited:
             return False
 
-        return (
-            dfs(row + 1, column, index + 1) or \
+        visited.add((row, column))
+        result = dfs(row + 1, column, index + 1) or \
             dfs(row - 1, column, index + 1) or \
             dfs(row, column + 1, index + 1) or \
             dfs(row, column - 1, index + 1)
-        )
+        visited.pop((row, column))
+        
+        return result
 
     for i in range(ROWS):
         for j in range(COLUMNS):
