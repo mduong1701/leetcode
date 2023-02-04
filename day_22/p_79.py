@@ -20,13 +20,13 @@ def exist(board, word):
             dfs(row - 1, column, index + 1) or \
             dfs(row, column + 1, index + 1) or \
             dfs(row, column - 1, index + 1)
-        visited.pop((row, column))
+        visited.remove((row, column))
         
         return result
 
     for i in range(ROWS):
         for j in range(COLUMNS):
-            if dfs(i,j):
+            if dfs(i, j, 0):
                 return True
 
     return False
