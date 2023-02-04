@@ -6,9 +6,17 @@ def rotate(matrix):
     bottom = len(matrix) - 1
 
     while left <= right:
+
         for i in range(left, right + 1):
             temp = matrix[top][i]
             matrix[top][i] = matrix[bottom][i]
             matrix[bottom][i] = matrix[bottom][right - i]
             matrix[bottom][right - i] = matrix[top][right - i]
             matrix[top][right - i] = temp
+
+        left += 1
+        right -= 1
+        top += 1
+        bottom -= 1
+
+    return matrix
