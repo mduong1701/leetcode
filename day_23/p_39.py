@@ -3,12 +3,17 @@ def combinationSum(candidates, target):
     currentArray = []
 
     def dfs(i):
-        if sum(currentArray) > target:
+        if i == len(candidates) or sum(currentArray) > target:
             return
         if sum(currentArray) == target:
             result.append(currentArray.copy())
+            return
 
         currentArray.append(candidates[i])
         dfs(i)
         currentArray.pop()
         dfs(i + 1)
+
+    dfs(0)
+
+    return result
