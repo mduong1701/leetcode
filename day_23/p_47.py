@@ -9,9 +9,19 @@ def permute(nums):
 
     def dfs():
         if len(currentA) == len(nums):
-            result.append(currentA)
+            result.append(currentA.copy())
             return
 
-        
+        for number in count:
+            if count[number] > 0:
+                currentA.append(number)
+                count[number] -= 1
 
-        
+                dfs()
+
+                currentA.pop()
+                count[number] += 1
+
+    dfs()
+
+    return result
