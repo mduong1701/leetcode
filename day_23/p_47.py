@@ -10,5 +10,8 @@ def permute(nums):
     def dfs():
         if len(currentA) == len(nums):
             result.append(currentA)
+            return
+
+        
 
         
