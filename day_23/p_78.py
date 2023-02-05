@@ -1,2 +1,4 @@
 def subsets(nums):
+    result = []
+
     
