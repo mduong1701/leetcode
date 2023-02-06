@@ -17,4 +17,12 @@ def setZeroes(matrix):
             if matrix[0][column] == 0 or matrix[row][0] == 0:
                 matrix[row][column] = 0
             
+    if matrix[0][0] == 0:
+        for row in range(ROWS):
+            matrix[row][0] = 0
+
+    if rowZero:
+        for column in range(COLUMNS):
+            matrix[0][column] = 0
+
     
