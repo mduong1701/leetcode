@@ -1,14 +1,8 @@
 def canJump(nums):
-    length = len(nums)
+    goal = len(nums) - 1
 
-    if length == 1 and nums[0] == 0:
-        return True
+    for i in range(len(nums) - 2, -1, -1):
+        if i + nums[i] >= goal:
+            goal = i
 
-    i = 0
-
-    while i <= length:
-        i += nums[i]
-        if i == length:
-            return True
-
-    return False
+    return goal == 0
