@@ -24,3 +24,5 @@ def partition(s):
     dfs(0)
 
     return result
+
+print(partition("aab"))
