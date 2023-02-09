@@ -6,3 +6,9 @@ def isPal(s, start, end):
         end -= 1
     return  True
 
+def partition(s):
+    result = []
+    partition = []
+
+    def dfs(index):
+        
