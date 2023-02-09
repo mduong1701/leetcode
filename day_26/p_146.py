@@ -14,6 +14,17 @@ class LRUCache:
         # Double linked list
         self.left = Node(0,0)
         self.right = Node(0,0)
+        self.left.next = self.right
+        self.right.prev = self.left
+
+    def remove(self, node):
+        leftNode = node.prev
+        rightNode = node.next
+        leftNode.next = rightNode
+        rightNode.prev = leftNode
+
+    def insert(self, node):
+        
 
     def get(self, key: int) -> int:
         pass
