@@ -42,7 +42,7 @@ class LRUCache:
         if key in self.cache:
             self.remove(self.cache[key])
         self.insert(Node(key, value))
-        if len(self.capacity) < len(self.cache):
+        if self.capacity < len(self.cache):
             removeNode = self.left.next
             self.remove(removeNode)
             del self.cache[removeNode.key]
