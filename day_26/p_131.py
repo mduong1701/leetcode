@@ -26,3 +26,4 @@ def partition(s):
     return result
 
 print(partition("aab"))
+print(partition("sbs"))
