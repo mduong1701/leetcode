@@ -7,7 +7,7 @@ def numTrees(n):
         for root in range(1, numNodes + 1):
             left = root - 1
             right = numNodes - root
-            total += dp[left] + dp[right]
+            total += dp[left] * dp[right]
         dp[numNodes] = total
 
     return dp[-1]
