@@ -11,4 +11,10 @@ def partition(s):
     partition = []
 
     def dfs(index):
+        if index >= len(s):
+            result.append(partition)
+            return
         
+        for j in range(index, len(s)):
+            if isPal(s, index, j):
+                
