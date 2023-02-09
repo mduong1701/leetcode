@@ -12,9 +12,15 @@ def partition(s):
 
     def dfs(index):
         if index >= len(s):
-            result.append(partition)
+            result.append(partition.copy())
             return
         
         for j in range(index, len(s)):
             if isPal(s, index, j):
-                
+                partition.append(s[index:j+1])
+                dfs(j+1)
+                partition.pop()
+        
+    dfs(0)
+
+    
