@@ -24,10 +24,19 @@ class LRUCache:
         rightNode.prev = leftNode
 
     def insert(self, node):
-        
+        leftNode = self.right.prev
+        rightNode = self.right
+        node.prev = leftNode
+        node.next = rightNode
+        leftNode.next = node
+        rightNode.prev = node
 
     def get(self, key: int) -> int:
-        pass
+        if key in self.cache:
+            self.remove(self.cache[key])
+            self.insert(self.cache[key])
+            return self.cache[key].value
+        return -1
 
     def put(self, key: int, value: int) -> None:
         pass
