@@ -12,3 +12,6 @@ def numTrees(n):
 
     return dp[-1]
 
+print(numTrees(3))
+print(numTrees(4))
+print(numTrees(5))
