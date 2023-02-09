@@ -1,0 +1,2 @@
+def character(s, k):
+    
