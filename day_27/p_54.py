@@ -26,3 +26,6 @@ def spiral(matrix):
         for i in range(bottom, top - 1, -1):
             result.append(matrix[i][left])
         left += 1
+
+    return result
+    
