@@ -1,5 +1,5 @@
 def rob(nums):
-    max(nums[:-1], nums[1:], nums[0])
+    return max(helper(nums[:-1]), helper(nums[1:]), nums[0])
 
 def helper(nums):
     # 0      0     1     2     3      4
