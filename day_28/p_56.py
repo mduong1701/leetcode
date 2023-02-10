@@ -6,3 +6,5 @@ def merge(intervals):
             result[-1][1] = max(result[-1][1], end)
         else:
             result.append([start, end])
+    
+    return result
