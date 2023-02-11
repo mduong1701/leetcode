@@ -22,4 +22,4 @@ def maximalSquare(matrix):
 
     dfs(0, 0)
     
-    return max(cache.values())
+    return max(cache.values()) ** 2
