@@ -19,3 +19,7 @@ def maximalSquare(matrix):
                 cache[(row, column)] = 1 + min(down, right, diag)
 
         return cache[(row, column)]
+
+    dfs(0, 0)
+    
+    return max(cache.values())
