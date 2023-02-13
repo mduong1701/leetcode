@@ -1,2 +1,1 @@
-def minMeetingRooms(self, intervals):
-    
+def minMeetingRooms(intervals):
