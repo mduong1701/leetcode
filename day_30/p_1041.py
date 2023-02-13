@@ -3,4 +3,13 @@ def isRobotBounded(self, instructions):
     x, y = 0, 0
 
     for instruction in instructions:
-        
+        if instruction == "G":
+            x += dirX
+            y += dirY
+        elif instruction == "L":
+            dirX, dirY = -1 * dirY, dirX
+        else:
+            dirX = dirY
+            dirY = dirX
+
+    return (x, y) == (0, 0) or (dirX, dirY) != (0, 1)
