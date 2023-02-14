@@ -10,6 +10,6 @@ def isRobotBounded(self, instructions):
             dirX, dirY = -1 * dirY, dirX
         else:
             dirX = dirY
-            dirY = dirX
+            dirY = -1 * dirX
 
     return (x, y) == (0, 0) or (dirX, dirY) != (0, 1)
