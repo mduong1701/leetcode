@@ -11,4 +11,8 @@ def kthSmallest(root, k):
         cur = root
 
         while cur or stack:
+            while cur:
+                stack.append(cur)
+                cur = cur.left
+            
             
