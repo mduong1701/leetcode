@@ -6,4 +6,9 @@ class TreeNode:
         self.right = right
 
 def kthSmallest(root, k):
-        
+        stack = []
+        count = 0
+        cur = root
+
+        while cur or stack:
+            
