@@ -21,4 +21,5 @@ def kthSmallest(root, k):
             if count == k:
                 return cur.val
 
-            
+            cur = cur.right
+
