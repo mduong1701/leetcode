@@ -1,3 +1,6 @@
+from logging import root
+
+
 class TrieNode():
     def  __init__(self):
         self.children = {}
@@ -9,8 +12,10 @@ class Trie:
         self.root = {}
 
     def insert(self, word):
+        current = self.root
         
-        
+        for character in word:
+            
 
     def search(self, word: str) -> bool:
         
