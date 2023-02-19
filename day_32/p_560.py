@@ -8,7 +8,8 @@ class Solution:
         visited = set()
 
         for i in range(len(nums)):
-            if nums[i] == k:
+            if nums[i] == k or (k - nums[i] in visited):
                 count += 1
             visited.add(nums[i])
 
+        return count
