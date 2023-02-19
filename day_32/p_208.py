@@ -15,7 +15,11 @@ class Trie:
         current = self.root
         
         for character in word:
-            
+            if character not in current.children:
+                current.children[character] = TrieNode()
+            current = current.children[character]
+        
+
 
     def search(self, word: str) -> bool:
         
