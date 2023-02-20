@@ -20,4 +20,9 @@ class Solution:
                 result[i + j + 1] += product // 10
                 result[i + j] += product % 10
 
+        result = result[::-1]
+        start = 0
+        while start < len(result) and result[start] == 0:
+            start += 1
+
         
