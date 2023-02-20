@@ -25,4 +25,8 @@ class Solution:
         while start < len(result) and result[start] == 0:
             start += 1
 
-        
+        final = ""
+        for i in range(len(result)):
+            final += str(result[i])
+
+        return "".join(final)
