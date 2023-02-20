@@ -26,7 +26,7 @@ class Solution:
             start += 1
 
         final = ""
-        for i in range(len(result)):
+        for i in range(start, len(result)):
             final += str(result[i])
 
         return "".join(final)
