@@ -16,9 +16,9 @@ class Solution:
         for j in range(len(num2)):
             for i in range(len(num1)):
                 product = int(num1[i]) * int(num2[j])
-                result[i + j] = product
-                result[i + j + 1] += product // 10
-                result[i + j] += product % 10
+                result[i + j] += product
+                result[i + j + 1] += result[i + j] // 10
+                result[i + j] = result[i + j] % 10
 
         result = result[::-1]
         start = 0
