@@ -7,4 +7,7 @@ class Solution:
 
         for string in strs:
             countArray = [0 for _ in range(26)]
-            
+            for character in string:
+                countArray[ord(character) - ord("a")] += 1
+
+        
