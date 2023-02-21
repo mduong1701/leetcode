@@ -10,4 +10,7 @@ class Solution:
             for character in string:
                 countArray[ord(character) - ord("a")] += 1
 
+            result[tuple(countArray)].append(string)
+
+        
         
