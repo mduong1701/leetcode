@@ -11,4 +11,4 @@ class Solution:
                 countArray[ord(character) - ord("a")] += 1
             result[tuple(countArray)].append(string)
 
-        return result.values
+        return result.values()
