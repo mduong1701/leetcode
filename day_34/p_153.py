@@ -6,4 +6,6 @@ class Solution:
         right = len(nums)
 
         while left <= right:
-            
+            if nums[left] < nums[right]:
+                result = min(result, nums[left])
+                break
