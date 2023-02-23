@@ -25,4 +25,8 @@ class Solution:
                     level.append(node.val)
                 
                 queue.append(node.left, node.right)
-                
+            
+            if level:
+                result.append(level)
+
+        return result
