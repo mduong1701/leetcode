@@ -1,3 +1,12 @@
 class Solution:
-    def minSwaps(self, s)
-    
+    def minSwaps(self, s):
+        closeNum = 0
+        closeMax = 0
+
+        for character in s:
+            if character == "]":
+                closeNum += 1
+            else:
+                closeNum -= 1
+            
+            
