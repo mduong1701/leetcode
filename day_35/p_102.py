@@ -20,3 +20,9 @@ class Solution:
 
             for _ in range(queueLength):
                 node = queue.popleft()
+
+                if node:
+                    level.append(node.val)
+                
+                queue.append(node.left, node.right)
+                
