@@ -1,6 +1,5 @@
 import collections
 
-
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -23,8 +22,8 @@ class Solution:
 
                 if node:
                     level.append(node.val)
-                
-                queue.append(node.left, node.right)
+                    queue.append(node.left)
+                    queue.append(node.right)
             
             if level:
                 result.append(level)
