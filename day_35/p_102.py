@@ -1,3 +1,6 @@
+import collections
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -6,5 +9,10 @@ class TreeNode:
 
 class Solution:
     def levelOrder(self, root):
-        
-        
+        queue = collections.deque()
+        queue.append(root)
+
+        result = []
+
+        while queue:
+            
