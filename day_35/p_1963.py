@@ -9,4 +9,6 @@ class Solution:
             else:
                 closeNum -= 1
             
-            
+            closeMax = max(closeMax, closeNum)
+
+        return (closeMax + 1) // 2
