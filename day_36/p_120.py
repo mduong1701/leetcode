@@ -8,4 +8,7 @@ class Solution:
             for j in range(len(temp)):
                 temp[j] += min(dp[j], dp[j + 1])
             
-            
+            dp = temp
+
+        return dp[0]
+
