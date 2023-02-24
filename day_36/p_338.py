@@ -4,4 +4,8 @@ class Solution:
         level = 1
 
         for i in range(1, n + 1):
-            if 
+            if n == level * 2:
+                level = i
+            dp[i] = 1 + dp[i - level]
+
+        return dp
