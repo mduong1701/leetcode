@@ -4,7 +4,7 @@ class Solution:
         level = 1
 
         for i in range(1, n + 1):
-            if n == level * 2:
+            if i == level * 2:
                 level = i
             dp[i] = 1 + dp[i - level]
 
