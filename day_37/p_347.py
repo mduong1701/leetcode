@@ -9,4 +9,9 @@ class Solution:
         for num, freq in count.items():
             frequency[freq].append(num)
 
-        
+        result = []
+        for i in range(len(frequency) - 1, 0, -1):
+            for j in frequency[i]:
+                result.append(j)
+                if len(result) == k:
+                    return result
