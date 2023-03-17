@@ -14,4 +14,8 @@ class Solution:
             second = curr.next
             nxtPair = curr.next.next
 
+            second.next = curr
+            curr.next = nxtPair
+            prev.next = second
+
             
