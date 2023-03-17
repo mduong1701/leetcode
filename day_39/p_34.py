@@ -3,4 +3,6 @@ class Solution:
         pass
 
     def binarySearch(self, nums, target, leftBias):
-        pass
+        left = 0
+        right = len(nums) - 1
+        
