@@ -18,4 +18,7 @@ class Solution:
             curr.next = nxtPair
             prev.next = second
 
-            
+            prev = curr
+            curr = nxtPair
+
+        return dummy.next
