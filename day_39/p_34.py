@@ -1,6 +1,9 @@
 class Solution:
     def searchRange(self, nums, target):
-        pass
+        leftIndex = self.binarySearch(nums, target, True)
+        rightIndex = self.binarySearch(nums, target, False)
+
+        return [leftIndex, rightIndex]
 
     def binarySearch(self, nums, target, leftBias):
         left = 0
