@@ -8,4 +8,16 @@ class Solution:
         i = -1
 
         while left <= right:
-            
+            middle = (left + right) // 2
+            if target > nums[middle]:
+                left = middle + 1
+            elif target < nums[middle]:
+                right = middle - 1
+            else:
+                i = middle
+                if leftBias:
+                    right = middle - 1
+                else:
+                    left = middle + 1
+        
+        return i
