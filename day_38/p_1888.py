@@ -2,6 +2,8 @@ class Solution:
     def minFlips(self, s):
         # Initialize the final result to be the length of the string
         result = len(s)
+        # length of original string
+        lengthS = len(s)
         # Double the string
         s = s + s
         # Make 2 desired outcome strings 010101... 101010...
@@ -21,4 +23,4 @@ class Solution:
                 diff1 += 1
             if s[r] != desiredS2[r]:
                 diff2 += 1
-                
+            
