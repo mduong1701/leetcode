@@ -8,4 +8,10 @@ class Solution:
         desiredS1 = ""
         desiredS2 = ""
         for i in range(len(s)):
+            desiredS1 += "1" if i % 2 == 0 else "0"
+            desiredS2 += "0" if i % 2 == 0 else "1"
+        # Left pointer
+        l = 0
+        # Sliding window
+        for r in range(len(s)):
             
