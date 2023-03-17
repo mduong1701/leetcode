@@ -5,4 +5,9 @@ class ListNode:
 
 class Solution:
     def swapPairs(self, head):
+        dummy = ListNode(0, head)
+
+        prev = dummy
+        curr = head
+
         
