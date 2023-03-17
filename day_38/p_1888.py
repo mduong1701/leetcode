@@ -23,4 +23,10 @@ class Solution:
                 diff1 += 1
             if s[r] != desiredS2[r]:
                 diff2 += 1
+            if r - l + 1 > lengthS:
+                if s[l] != desiredS1[l]:
+                    diff1 -= 1
+                if s[l] != desiredS2[l]:
+                    diff2 -= 1
+                l += 1
             
