@@ -12,6 +12,13 @@ class Solution:
             desiredS2 += "0" if i % 2 == 0 else "1"
         # Left pointer
         l = 0
+        # Differences between s and desiredS1 and desired2
+        diff1 = 0
+        diff2 = 0
         # Sliding window
         for r in range(len(s)):
-            
+            if s[r] != desiredS1[r]:
+                diff1 += 1
+            if s[r] != desiredS2[r]:
+                diff2 += 1
+                
