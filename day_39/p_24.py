@@ -10,4 +10,8 @@ class Solution:
         prev = dummy
         curr = head
 
-        
+        while curr and curr.next:
+            second = curr.next
+            nxtPair = curr.next.next
+
+            
