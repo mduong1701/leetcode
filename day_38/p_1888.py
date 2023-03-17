@@ -29,4 +29,7 @@ class Solution:
                 if s[l] != desiredS2[l]:
                     diff2 -= 1
                 l += 1
-            
+            if r - l + 1 == lengthS:
+                result = min(result, diff1, diff2)
+        #Return the result
+        return result
