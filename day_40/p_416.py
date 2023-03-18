@@ -9,5 +9,11 @@ class Solution:
         dp = set()
         dp.add(0)
 
-        
+        for i in range(len(nums)):
+            tempDP = set()
+            for num in dp:
+                if num + nums[i] == target:
+                    return True
+
+                
 
