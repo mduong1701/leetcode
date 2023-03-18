@@ -6,4 +6,7 @@ class Solution:
         while top < bottom:
             middle = (top + bottom) // 2
 
+            if target < matrix[middle][0]:
+                bottom = middle - 1
+
             
