@@ -15,5 +15,11 @@ class Solution:
                 if num + nums[i] == target:
                     return True
 
-                
+                if num + nums[i] < target:
+                    tempDP.add(num + nums[i])
+                    tempDP.add(num)
+
+            dp = tempDP
+
+        
 
