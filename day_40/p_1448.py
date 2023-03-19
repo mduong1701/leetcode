@@ -6,4 +6,9 @@ class TreeNode:
 
 class Solution:
     def goodNodes(self, root):
-        
+
+        def dfs(node, maxValue):
+            if not node:
+                return 0
+
+            
