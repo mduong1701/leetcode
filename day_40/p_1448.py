@@ -12,4 +12,11 @@ class Solution:
                 return 0
 
             result = 1 if node.val >= maxValue else 0
-            
+            maxValue = max(maxValue, node.val)
+
+            result += dfs(node.left, maxValue)
+            result += dfs(node.right, maxValue)
+
+            return result
+
+        return dfs(root, root.val)
