@@ -4,4 +4,7 @@ class Solution:
         sumOdd = 0
 
         for i in range(len(nums) - 1, -1, -1):
+            tempEven = max(sumEven, sumOdd + nums[i])
+            tempOdd = max(sumOdd, sumEven - nums[i])
+
             
