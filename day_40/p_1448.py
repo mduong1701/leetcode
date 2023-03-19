@@ -11,4 +11,5 @@ class Solution:
             if not node:
                 return 0
 
+            result = 1 if node.val >= maxValue else 0
             
