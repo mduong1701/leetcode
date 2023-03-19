@@ -8,4 +8,5 @@ class Solution:
                 square = num ** 2
                 if square > target:
                     break
+                dp[target] = min(dp[target], 1 + dp[target - square])
                 
