@@ -7,4 +7,7 @@ class Solution:
             tempEven = max(sumEven, sumOdd + nums[i])
             tempOdd = max(sumOdd, sumEven - nums[i])
 
-            
+            sumEven = tempEven
+            sumOdd = tempOdd
+
+        return sumEven
