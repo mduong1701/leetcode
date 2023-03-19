@@ -3,4 +3,5 @@ class Solution:
         sumEven = 0
         sumOdd = 0
 
-        
+        for i in range(len(nums) - 1, -1, -1):
+            
