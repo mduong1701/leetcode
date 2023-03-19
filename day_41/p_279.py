@@ -9,4 +9,5 @@ class Solution:
                 if square > target:
                     break
                 dp[target] = min(dp[target], 1 + dp[target - square])
-                
+        
+        return dp[n]
