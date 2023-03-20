@@ -6,4 +6,9 @@ class TreeNode:
 
 class Solution:
     def rob(self, root):
-        
+
+        def dfs(node):
+            if not node:
+                return [0,0]
+            
+            
