@@ -19,4 +19,4 @@ class Solution:
 
             return [withRoot, withoutRoot]
 
-        
+        return max(dfs(root))
