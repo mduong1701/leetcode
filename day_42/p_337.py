@@ -14,4 +14,9 @@ class Solution:
             leftPair = dfs(node.left)
             rightPair = dfs(node.right)
 
-            
+            withRoot = node.val + leftPair[1] + rightPair[1]
+            withoutRoot = max(leftPair) + max(rightPair)
+
+            return [withRoot, withoutRoot]
+
+        
