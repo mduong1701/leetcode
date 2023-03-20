@@ -11,4 +11,7 @@ class Solution:
             if not node:
                 return [0,0]
             
+            leftPair = dfs(node.left)
+            rightPair = dfs(node.right)
+
             
