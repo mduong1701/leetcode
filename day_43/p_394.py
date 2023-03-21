@@ -6,4 +6,10 @@ class Solution:
             if s[i] != "]":
                 stack.append(s[i])
             else:
+                substring = ""
+                while stack[-1] != "[":
+                    substring = stack.pop() + substring
+                stack.pop()
+
+                num = ""
                 
