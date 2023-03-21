@@ -12,4 +12,7 @@ class Solution:
                 stack.pop()
 
                 num = ""
+                while stack and stack[-1].isdigit():
+                    num = stack.pop() + num
+
                 
