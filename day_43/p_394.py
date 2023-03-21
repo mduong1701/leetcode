@@ -15,4 +15,6 @@ class Solution:
                 while stack and stack[-1].isdigit():
                     num = stack.pop() + num
 
-                
+                stack.append(int(num) * substring)
+
+        return "".join(stack)
