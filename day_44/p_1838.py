@@ -1,11 +1,13 @@
 class Solution:
     def maxFrequency(self, nums, k):
+
+        nums.sort()
         left, right, total, result = 0, 0, 0, 0
 
         while right < len(nums):
             total += nums[right]
 
-            while nums[right] * (right - left + 1) >= total + k:
+            while nums[right] * (right - left + 1) > total + k:
                 total -= nums[left]
                 left += 1
 
