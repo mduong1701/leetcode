@@ -6,4 +6,7 @@ class Solution:
             interval1 = intervals[i - 1]
             interval2 = intervals[1]
 
-            
+            if interval1[1] > interval2[0]:
+                return False
+
+        return True
