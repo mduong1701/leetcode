@@ -14,4 +14,7 @@ class Solution:
                     q.append(current)
                     if current == len(s) - 1:
                         return True
-                        
+
+            farthest = start + maxJump
+
+        return False
