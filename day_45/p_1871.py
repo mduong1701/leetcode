@@ -9,4 +9,5 @@ class Solution:
             index = q.popleft()
             start = max(index  + minJump, farthest)
 
-            
+            for current in range(start, min(start + maxJump+ 1, len(s))):
+                
