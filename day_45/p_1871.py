@@ -5,4 +5,8 @@ class Solution:
         q = deque([0])
         farthest = 0
 
-        
+        while q:
+            index = q.popleft()
+            start = max(index  + minJump, farthest)
+
+            
