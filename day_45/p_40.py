@@ -1,6 +1,3 @@
-from locale import currency
-
-
 class Solution:
     def combinationSum2(self, candidates, target):
         candidates.sort()
@@ -18,9 +15,10 @@ class Solution:
                     continue
 
                 curArr.append(candidates[i])
-                backtracking(curArr, i + 1, target - candidates[i])
+                backtracking(curArr, i + 1, sumLeft - candidates[i])
                 curArr.pop()
 
                 previous = candidates[i]
 
-            
+        backtracking([], 0, target)
+        return result
