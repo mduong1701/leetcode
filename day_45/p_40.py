@@ -11,4 +11,8 @@ class Solution:
 
             previous = -1
             for i in range(start, len(candidates)):
+                if candidates[i] == previous:
+                    continue
+
+                curArr.append(candidates[i])
                 
