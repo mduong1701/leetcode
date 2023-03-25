@@ -9,4 +9,6 @@ class Solution:
             if sumLeft <= 0:
                 return
 
-            
+            previous = -1
+            for i in range(start, len(candidates)):
+                
