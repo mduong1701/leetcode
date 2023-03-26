@@ -26,4 +26,4 @@ class Solution:
             result[i] = index
             heapq.heappush(unavailable, (t + tasks[i], weight, index))
 
-            return result
+        return result
