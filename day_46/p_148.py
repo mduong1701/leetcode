@@ -22,4 +22,7 @@ class Solution:
         return self.merge(leftPart, rightPart)
 
     def getMid(self, head):
+        slow = head
+        fast = head.next
+
         
