@@ -9,4 +9,17 @@ class Solution:
         if not head or not head.next:
             return head
 
+        left = head
+        right = self.getMid(head)
+
+        tmp = right.next
+        right.next = None
+        right = tmp
+
+        leftPart = self.sortList(left)
+        rightPart = self.sortList(right)
+
+        return self.merge(leftPart, rightPart)
+
+    def getMid(self, head):
         
