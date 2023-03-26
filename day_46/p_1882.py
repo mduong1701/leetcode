@@ -11,3 +11,8 @@ class Solution:
         heapq.heapify(available)
         unavailable = []
 
+        t = 0
+        for i in range(len(tasks)):
+            t = max(t, i)
+
+            
