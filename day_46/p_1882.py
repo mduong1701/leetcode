@@ -1,5 +1,5 @@
 # available = [(weight, index)]
-# unavailable = [(timeLeftToBeFree, weight, index)]
+# unavailable = [(timeToBeFree, weight, index)]
 
 import heapq
 
@@ -15,4 +15,15 @@ class Solution:
         for i in range(len(tasks)):
             t = max(t, i)
 
-            
+            if len(available) == 0:
+                t = unavailable[0][0]
+
+            while unavailable and t >= unavailable[0][0]:
+                _ , weight, index = heapq.heappop(unavailable)
+                heapq.heappush(available, (weight, index))
+
+            weight, index = heapq.heappop(available)
+            result[i] = index
+            heapq.heappush(unavailable, (t + tasks[i], weight, index))
+
+            return result
