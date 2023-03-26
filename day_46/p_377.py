@@ -6,4 +6,7 @@ class Solution:
         for total in range(1, target + 1):
             dp[total] = 0
 
-            
+            for num in nums:
+                dp[total] += dp.get(target - num, 0)
+
+        return dp[target]
