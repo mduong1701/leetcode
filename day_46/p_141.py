@@ -6,3 +6,7 @@ class ListNode:
 
 class Solution:
     def hasCycle(self, head):
+        slow = head
+        fast = head
+
+        
