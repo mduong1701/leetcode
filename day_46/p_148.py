@@ -6,4 +6,7 @@ class ListNode:
 
 class Solution:
     def sortList(self, head):
+        if not head or not head.next:
+            return head
+
         
