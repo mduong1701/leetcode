@@ -21,4 +21,8 @@ class Solution:
             if not minHeap:
                 time = tasks[i][0]
             else:
-                
+                processingTime, index = heapq.heappop(minHeap)
+                result.append(index)
+                time += processingTime
+
+        return result
