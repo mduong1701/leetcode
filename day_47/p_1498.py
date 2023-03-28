@@ -9,4 +9,8 @@ class Solution:
         for left in range(len(nums)):
             while (nums[left] + nums[right]) > target and left <= right:
                 right -= 1
-                
+
+            if left <= right:
+                result += 2**(right - left)
+
+        return result % mod
