@@ -18,4 +18,7 @@ class Solution:
                 heapq.heappush(minHeap, [tasks[i][1], tasks[i][2]])
                 i += 1
 
-            
+            if not minHeap:
+                time = tasks[i][0]
+            else:
+                
