@@ -5,7 +5,9 @@ class Solution:
         for house in range(1, len(costs)):
             tempCosts = []
             for costIndex in range(len(costs[house])):
-                temp = costs[house][costIndex] + min(result[:costIndex], result[costIndex + 1:])
+                temp = costs[house][costIndex] + min(result[:costIndex] + result[costIndex + 1:])
                 tempCosts.append(temp)
-            
+            result = tempCosts
+
+        return min(result)
 
