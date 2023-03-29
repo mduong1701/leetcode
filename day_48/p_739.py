@@ -4,6 +4,9 @@ class Solution:
         stack = []
 
         for i, t in enumerate(temperatures):
+            while stack and t > stack[-1][1]:
+                temperature, index = stack.pop()
+                
             stack.append((t, i))
 
         return result
