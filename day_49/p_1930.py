@@ -19,3 +19,5 @@ class Solution:
                     result.add((s[i], c))
 
             left.add(s[i])
+
+        return len(result)
