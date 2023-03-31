@@ -22,4 +22,23 @@ class Solution:
         for row in range(ROWS):
             for column in range(COLS):
                 numNeighbors = neighbors(row, column)
-                
+                if numNeighbors == 3:
+                    if board[row][column] == 0:
+                        board[row][column] = 5
+                    elif board[row][column] == 1:
+                        board[row][column] = 7
+                elif numNeighbors == 2:
+                    if board[row][column] == 1:
+                        board[row][column] = 7
+                else:
+                    if board[row][column] == 0:
+                        board[row][column] = 4
+                    elif board[row][column] == 1:
+                        board[row][column] = 6
+
+        for row in range(ROWS):
+            for column in range(COLS):
+                if board[row][column] in [4,6]:
+                    board[row][column] = 0
+                else: 
+                    board[row][column] = 1
