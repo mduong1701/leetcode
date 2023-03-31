@@ -14,7 +14,7 @@ class Solution:
                 del right[s[i]]
 
             for j in range(26):
-                c = chr(ord(s[i]) + j)
+                c = chr(ord('a') + j)
                 if c in left and c in right:
                     result.add((s[i], c))
 
