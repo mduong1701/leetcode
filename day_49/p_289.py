@@ -30,6 +30,8 @@ class Solution:
                 elif numNeighbors == 2:
                     if board[row][column] == 1:
                         board[row][column] = 7
+                    elif board[row][column] == 0:
+                        board[row][column] = 4
                 else:
                     if board[row][column] == 0:
                         board[row][column] = 4
