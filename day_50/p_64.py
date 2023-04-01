@@ -8,3 +8,7 @@ class Solution:
 
         for j in range(ROWS - 2, -1, -1):
             grid[j][-1] += grid[j + 1][-1]
+
+        for row in range(ROWS - 2, -1, -1):
+            for col in range(COLS - 2, -1, -1):
+                
