@@ -11,4 +11,6 @@ class Solution:
 
         for row in range(ROWS - 2, -1, -1):
             for col in range(COLS - 2, -1, -1):
-                
+                grid[row][col] += min(grid[row + 1][col], grid[row][col + 1])
+
+        return grid[0][0]
