@@ -12,3 +12,10 @@ class Solution:
 
         while i <= right:
             if nums[i] == 0:
+                swap(left, i)
+                left += 1
+            elif nums[i] == 2:
+                swap(right, i)
+                right -= 1
+                i -= 1
+            i += 1
