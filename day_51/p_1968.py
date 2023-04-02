@@ -9,4 +9,9 @@ class Solution:
         while len(result) != len(nums):
             result.append(nums[left])
             left += 1
-            
+
+            if left <= right:
+                result.append(nums[right])
+                right -= 1
+        
+        return result
