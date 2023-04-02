@@ -7,4 +7,6 @@ class Solution:
         right = len(nums) - 1
 
         while len(result) != len(nums):
+            result.append(nums[left])
+            left += 1
             
