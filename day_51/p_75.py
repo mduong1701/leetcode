@@ -4,7 +4,7 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         left = 0
-        right = len(nums)
+        right = len(nums) - 1
         i = 0
 
         def swap(a, b):
