@@ -7,5 +7,8 @@ class Solution:
         right = len(nums)
         i = 0
 
+        def swap(a, b):
+            nums[a], nums[b] = nums[b], nums[a]
+
         while i <= right:
-            
+            if nums[i] == 0:
