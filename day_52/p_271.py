@@ -7,4 +7,8 @@ class Codec:
         
         return result
 
-    def decode(self, s: str) -> List[str]:
+    def decode(self, s):
+        result = []
+        i = 0
+
+        
