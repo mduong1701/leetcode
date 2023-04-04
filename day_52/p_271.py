@@ -1,6 +1,3 @@
-from re import I
-
-
 class Codec:
     def encode(self, strs):
         result = ""
@@ -17,7 +14,7 @@ class Codec:
         while i < len(s):
             j = i
             
-            while j != "#":
+            while s[j] != "#":
                 j += 1
 
             length = int(s[i : j])
