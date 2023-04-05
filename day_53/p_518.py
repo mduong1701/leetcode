@@ -8,4 +8,6 @@ class Solution:
             nextDP[0] = 1
 
             for i in range(1, amount + 1):
-                
+                nextDP[i] = dp[i]
+                if i >= coins[coinIndex]:
+                    nextDP[i] += nextDP[i - coins[coinIndex]]
