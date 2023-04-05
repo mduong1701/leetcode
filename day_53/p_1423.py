@@ -5,4 +5,6 @@ class Solution:
         #                l               r
         l = 0
         r = len(cardPoints) - k
+        total = sum(cardPoints[r : ])
+        result = total
         
