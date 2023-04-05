@@ -11,4 +11,7 @@ class Solution:
         while r < len(cardPoints):
             total += (cardPoints[l] - cardPoints[r])
             result = max(result, total)
-            
+            l += 1
+            r += 1
+
+        return result
