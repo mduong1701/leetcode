@@ -11,3 +11,7 @@ class Solution:
                 nextDP[i] = dp[i]
                 if i >= coins[coinIndex]:
                     nextDP[i] += nextDP[i - coins[coinIndex]]
+            
+            dp = nextDP
+
+        return dp[amount]
