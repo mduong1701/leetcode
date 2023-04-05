@@ -7,4 +7,8 @@ class Solution:
         r = len(cardPoints) - k
         total = sum(cardPoints[r : ])
         result = total
-        
+
+        while r < len(cardPoints):
+            total += (cardPoints[l] - cardPoints[r])
+            result = max(result, total)
+            
