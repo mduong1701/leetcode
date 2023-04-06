@@ -9,9 +9,6 @@ class Solution:
         if not head:
             return head
 
-        if k == 0:
-            return head
-            
         length = 1
         tail = head
 
@@ -20,6 +17,8 @@ class Solution:
             tail = tail.next
 
         k = k % length
+        if k == 0:
+            return head
         
         cur = head
         for _ in range(length - k - 1):
