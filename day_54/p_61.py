@@ -9,6 +9,9 @@ class Solution:
         if not head:
             return head
 
+        if k == 0:
+            return head
+            
         length = 1
         tail = head
 
