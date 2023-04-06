@@ -16,4 +16,10 @@ class Solution:
             length += 1
             tail = tail.next
 
+        k = k % length
+        
+        cur = head
+        for _ in range(length - k - 1):
+            cur = cur.next
+
         
