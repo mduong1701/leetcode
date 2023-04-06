@@ -9,4 +9,11 @@ class Solution:
         if not head:
             return head
 
+        length = 1
+        tail = head
+
+        while tail.next:
+            length += 1
+            tail = tail.next
+
         
