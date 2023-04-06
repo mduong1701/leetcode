@@ -10,4 +10,5 @@ class Solution:
             result = result * result
             return base * result if power % 2 else result
 
-        
+        myResult = helper(x, abs(n))
+        return myResult if n >= 0 else 1 / myResult
