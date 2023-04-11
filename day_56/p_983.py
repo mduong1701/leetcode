@@ -8,6 +8,8 @@ class Solution:
             dp[i] = float('inf')
             for day, cost in zip([1, 7, 30], costs):
                 j = i
+                while j < len(days) and days[j] < days[i] + day:
+                    j += 1
                 
 
 
