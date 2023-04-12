@@ -23,4 +23,7 @@ class Solution:
                     queue.append(node.left)
                     queue.append(node.right)
 
+            if rightNode:
+                result.append(rightNode.val)
+                
         return result
