@@ -13,6 +13,9 @@ class Solution:
         queue = collections.deque([root])
 
         while queue:
+            rightNode = None
+            queueLength = len(queue)
+
             
 
         return result
