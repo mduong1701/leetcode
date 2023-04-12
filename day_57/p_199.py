@@ -11,4 +11,8 @@ class Solution:
     def rightSideView(self, root):
         result = []
         queue = collections.deque([root])
-        
+
+        while queue:
+            
+
+        return result
