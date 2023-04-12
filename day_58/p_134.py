@@ -5,5 +5,7 @@ class Solution:
 
         result = 0
         total = 0
-        
+
         for i in range(len(gas)):
+            total += (gas[i] - cost[i])
+            
