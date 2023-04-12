@@ -20,4 +20,5 @@ class Solution:
             
             result = min(result, middle)
             right = middle - 1
-            
+
+        return result
