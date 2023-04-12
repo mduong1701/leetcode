@@ -16,6 +16,11 @@ class Solution:
             rightNode = None
             queueLength = len(queue)
 
-            
+            for i in range(queueLength):
+                node = queue.popleft()
+                if node:
+                    rightNode = node
+                    queue.append(node.left)
+                    queue.append(node.right)
 
         return result
