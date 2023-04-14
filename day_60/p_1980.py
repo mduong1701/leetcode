@@ -12,7 +12,10 @@ class Solution:
             if temp:
                 return temp
 
-            
+            current[index] = "1"
 
+            temp = backtracking(index + 1, current)
+            if temp:
+                return temp
 
         return backtracking(0, ["0" for _ in range(len(nums))])
