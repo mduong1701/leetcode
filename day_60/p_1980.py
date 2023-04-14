@@ -8,6 +8,10 @@ class Solution:
                 result = "".join(current)
                 return result if result not in numSet else None
 
+            temp = backtracking(index + 1, current)
+            if temp:
+                return temp
+
             
 
 
