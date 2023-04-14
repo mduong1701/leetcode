@@ -22,4 +22,8 @@ class Solution:
             
             return False
 
-        
+        for direction in DIRECTIONS:
+            if move(rMove, cMove, color, direction):
+                return True
+
+        return False
