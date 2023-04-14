@@ -8,6 +8,18 @@ class Solution:
         def move(x, y, color, direction):
             dx, dy = direction
             newX, newY = x + dx, y + dy
+            length = 1
 
             while (0 <= newX < ROWS) and (0 <= newY < COLS):
+                length += 1
+                if board[newX][newY] == '.':
+                    return False
+                if board[newX][newY] == color:
+                    return length >= 3
                 
+                newX += dx
+                newY += dy
+            
+            return False
+
+        
