@@ -9,4 +9,5 @@ class Solution:
             dx, dy = direction
             newX, newY = x + dx, y + dy
 
-            
+            while (0 <= newX < ROWS) and (0 <= newY < COLS):
+                
