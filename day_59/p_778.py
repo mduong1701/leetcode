@@ -12,6 +12,9 @@ class Solution:
         while minHeap:
             elevation, x, y = heapq.heappop(minHeap)
 
+            if x == N and y == N:
+                return elevation
+
             for direction in directions:
                 dX, dY = direction
                 newX = x + dX
@@ -22,6 +25,8 @@ class Solution:
 
                 visited.add((newX, newY))
 
-                
+                heapq.heappush(minHeap, [max(elevation, grid[newX][newY]), newX, newY])
+
+
 
 
