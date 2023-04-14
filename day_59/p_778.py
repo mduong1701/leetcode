@@ -12,7 +12,7 @@ class Solution:
         while minHeap:
             elevation, x, y = heapq.heappop(minHeap)
 
-            if x == N and y == N:
+            if x == N - 1 and y == N - 1:
                 return elevation
 
             for direction in directions:
