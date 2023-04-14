@@ -4,6 +4,11 @@ class Solution:
         numSet = {num for num in nums}
 
         def backtracking(index, current):
-            pass
+            if len(current) == index:
+                result = "".join(current)
+                return result if result not in numSet else None
+
+            
+
 
         return backtracking(0, ["0" for _ in range(len(nums))])
