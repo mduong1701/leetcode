@@ -12,5 +12,16 @@ class Solution:
         while minHeap:
             elevation, x, y = heapq.heappop(minHeap)
 
+            for direction in directions:
+                dX, dY = direction
+                newX = x + dX
+                newY = y + dY
+
+                if newX < 0 or newX == N or newY < 0 or newY == N or (newX, newY) in visited:
+                    continue
+
+                visited.add((newX, newY))
+
+                
 
 
