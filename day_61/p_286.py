@@ -23,13 +23,13 @@ class Solution:
                 x, y = queue.popleft()
                 rooms[x][y] = distance
                 for dx, dy in DIRECTIONS:
-                    x += dx
-                    y += dy
+                    newX = x + dx
+                    newY = y + dy
 
-                    if x < 0 or x == ROWS or y < 0 or y == COLUMNS or (x, y) in visited or rooms[x][y] == -1:
+                    if newX < 0 or newX == ROWS or newY < 0 or newY == COLUMNS or (newX, newY) in visited or rooms[newX][newY] == -1:
                         continue
 
-                    queue.append([x, y])
-                    visited.add((x, y))
+                    queue.append([newX, newY])
+                    visited.add((newX, newY))
             
             distance += 1
