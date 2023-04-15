@@ -15,7 +15,21 @@ class Solution:
                     queue.append([row, column])
                     visited.add((row, column))
 
+        distance = 0
         while queue:
             queueLength = len(queue)
+
             for _ in range(queueLength):
-                
+                x, y = queue.popleft()
+                rooms[x][y] = distance
+                for dx, dy in DIRECTIONS:
+                    x += dx
+                    y += dy
+
+                    if x < 0 or x == ROWS or y < 0 or y == COLUMNS or (x, y) in visited or rooms[x][y] == -1:
+                        continue
+
+                    queue.append([x, y])
+                    visited.add((x, y))
+            
+            distance += 1
