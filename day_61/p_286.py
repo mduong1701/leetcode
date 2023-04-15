@@ -11,4 +11,6 @@ class Solution:
 
         for row in range(ROWS):
             for column in range(COLUMNS):
-                
+                if rooms[row][column] == 0:
+                    queue.append([row, column])
+                    visited.add((row, column))
