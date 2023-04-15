@@ -14,3 +14,8 @@ class Solution:
                 if rooms[row][column] == 0:
                     queue.append([row, column])
                     visited.add((row, column))
+
+        while queue:
+            queueLength = len(queue)
+            for _ in range(queueLength):
+                
