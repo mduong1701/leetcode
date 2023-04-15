@@ -9,4 +9,6 @@ class Solution:
         visited = set()
         queue = deque()
 
-        
+        for row in range(ROWS):
+            for column in range(COLUMNS):
+                
