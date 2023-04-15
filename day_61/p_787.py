@@ -7,4 +7,14 @@ class Solution:
         # [ 0 inf inf ]
         for _ in range(k + 1):
             pricesTemp = prices.copy()
-            
+            # [ 0 inf inf ]
+            for source, destination, price in flights:
+                if pricesTemp[source] == float('inf'):
+                    continue
+
+                if pricesTemp[source] + price < pricesTemp[destination]:
+                    pricesTemp[destination] = pricesTemp[source] + price
+
+            prices = pricesTemp
+
+        return prices[dst] if prices[dst] != float('inf') else -1
