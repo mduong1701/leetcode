@@ -12,8 +12,8 @@ class Solution:
                 if pricesTemp[source] == float('inf'):
                     continue
 
-                if pricesTemp[source] + price < pricesTemp[destination]:
-                    pricesTemp[destination] = pricesTemp[source] + price
+                if prices[source] + price < pricesTemp[destination]:
+                    pricesTemp[destination] = prices[source] + price
 
             prices = pricesTemp
 
