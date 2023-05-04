@@ -9,6 +9,6 @@ class Solution:
 
         for times in count.values():
             if times > 1:
-                result += times * (times - 1) / 2
+                result += times * (times - 1) // 2
 
         return result
