@@ -5,6 +5,7 @@ class Solution:
 
         for row in wall:
 
-            length = 0
-            for brick in row:
-                
+            width = 0
+            for brick in row[:-1]:
+                width += brick
+                countGap[width] = 1 + countGap.get(width, 0)
