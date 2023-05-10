@@ -9,3 +9,5 @@ class Solution:
             for brick in row[:-1]:
                 width += brick
                 countGap[width] = 1 + countGap.get(width, 0)
+
+        return len(wall) - max(countGap.values())
