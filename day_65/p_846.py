@@ -2,6 +2,10 @@ import heapq
 
 class Solution:
     def isNStraightHand(self, hand, groupSize):
+
+        if len(hand) % groupSize != 0:
+            return False
+
         count = {}
 
         for card in hand:
@@ -10,5 +14,6 @@ class Solution:
         minHeap = list(count.keys)
         heapq.heapify(minHeap)
 
-        
+        while minHeap:
+
 
