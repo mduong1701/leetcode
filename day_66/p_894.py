@@ -15,13 +15,15 @@ class Solution:
 
             result = []
 
-            for leftBranch in range(numberOfNodes):
-                rightBranch = numberOfNodes - 1 - leftBranch
+            for leftNum in range(numberOfNodes):
+                rightNum = numberOfNodes - 1 - leftNum
 
-                left = backtracking(leftBranch)
-                right = backtracking(rightBranch)
+                leftBranch = backtracking(leftNum)
+                rightBranch = backtracking(rightNum)
 
-                
+                for left in leftBranch:
+                    for right in rightBranch:
+                        result.append(TreeNode(0, left, right))
 
             nodesDictionary[n] = result
 
