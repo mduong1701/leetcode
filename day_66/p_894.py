@@ -13,9 +13,16 @@ class Solution:
             if numberOfNodes in nodesDictionary:
                 return nodesDictionary[nodesDictionary]
 
-            result = 0
+            result = []
 
             for leftBranch in range(numberOfNodes):
                 rightBranch = numberOfNodes - 1 - leftBranch
 
+                left = backtracking(leftBranch)
+                right = backtracking(rightBranch)
+
                 
+
+            nodesDictionary[n] = result
+
+            return result
