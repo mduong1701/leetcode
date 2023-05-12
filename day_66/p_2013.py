@@ -8,6 +8,7 @@ class DetectSquares:
         self.points = []
 
     def add(self, point):
-        
+        self.pointCount[tuple(point)] += 1
+        self.points.append(point)
 
     def count(self, point):
