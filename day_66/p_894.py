@@ -11,7 +11,7 @@ class Solution:
 
         def backtracking(numberOfNodes):
             if numberOfNodes in nodesDictionary:
-                return nodesDictionary[nodesDictionary]
+                return nodesDictionary[numberOfNodes]
 
             result = []
 
@@ -25,6 +25,8 @@ class Solution:
                     for right in rightBranch:
                         result.append(TreeNode(0, left, right))
 
-            nodesDictionary[n] = result
+            nodesDictionary[numberOfNodes] = result
 
             return result
+
+        return backtracking(n)
