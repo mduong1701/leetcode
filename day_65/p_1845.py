@@ -9,4 +9,4 @@ class SeatManager:
         return heapq.heappop(self.unreserved)
 
     def unreserve(self, seatNumber: int) -> None:
-        
+        heapq.heappush(self.unreserved, seatNumber)
