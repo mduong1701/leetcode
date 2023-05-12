@@ -26,5 +26,7 @@ class Solution:
                 if count[card] == 0:
                     if card != first:
                         return False
-                    
+                    heapq.heappop(minHeap)
+        
+        return True
 
