@@ -11,7 +11,7 @@ class Solution:
         for card in hand:
             count[card] = 1 + count.get(card, 0)
 
-        minHeap = list(count.keys)
+        minHeap = list(count.keys())
         heapq.heapify(minHeap)
 
         while minHeap:
@@ -24,7 +24,7 @@ class Solution:
                 count[card] -= 1
 
                 if count[card] == 0:
-                    if card != first:
+                    if card != minHeap[0]:
                         return False
                     heapq.heappop(minHeap)
         
