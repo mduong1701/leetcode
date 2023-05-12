@@ -13,4 +13,9 @@ class Solution:
             if numberOfNodes in nodesDictionary:
                 return nodesDictionary[nodesDictionary]
 
-            
+            result = 0
+
+            for leftBranch in range(numberOfNodes):
+                rightBranch = numberOfNodes - 1 - leftBranch
+
+                
