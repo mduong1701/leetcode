@@ -1,6 +1,5 @@
 import collections
 
-
 class DetectSquares:
 
     def __init__(self):
