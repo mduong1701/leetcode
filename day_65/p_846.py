@@ -21,5 +21,8 @@ class Solution:
                 if card not in minHeap:
                     return False
                 
-                
+                count[card] -= 1
+
+                if count[card] == 0:
+                    
 
