@@ -24,5 +24,7 @@ class Solution:
                 count[card] -= 1
 
                 if count[card] == 0:
+                    if card != first:
+                        return False
                     
 
