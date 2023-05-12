@@ -10,4 +10,7 @@ class Solution:
         nodesDictionary = {0: [], 1: [TreeNode()]}
 
         def backtracking(numberOfNodes):
+            if numberOfNodes in nodesDictionary:
+                return nodesDictionary[nodesDictionary]
+
             
