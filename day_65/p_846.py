@@ -15,5 +15,11 @@ class Solution:
         heapq.heapify(minHeap)
 
         while minHeap:
+            first = minHeap[0]
 
+            for card in range(first, first + groupSize):
+                if card not in minHeap:
+                    return False
+                
+                
 
